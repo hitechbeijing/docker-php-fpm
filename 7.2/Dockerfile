@@ -9,10 +9,10 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) pdo \
     && docker-php-ext-install -j$(nproc) pdo_mysql \
     && docker-php-ext-install -j$(nproc) xml \
-    && docker-php-ext-install -j$(nproc) mcrypt \
     && docker-php-ext-install -j$(nproc) mbstring \
     && pecl install redis \
     && pecl install swoole \
     && pecl install amqp \
-    && docker-php-ext-enable redis swoole amqp
+    && pecl install mcrypt \
+    && docker-php-ext-enable redis swoole amqp mcrypt
 

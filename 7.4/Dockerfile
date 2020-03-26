@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
         librabbitmq-dev \
         libxml2-dev \
         libmcrypt-dev \
+        libonig-dev \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-install -j$(nproc) pdo \
     && docker-php-ext-install -j$(nproc) pdo_mysql \
